@@ -3,7 +3,7 @@
 <head>
 <script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>This one is for my Varchhu</title>
+<title>This one is for my Manya</title>
 
 <style type="text/css">
 @font-face {
@@ -26,26 +26,27 @@
 			<span class="comments">/**</span><br />
 			<span class="space"/><span class="comments">*THE CODE OF LOVE</span><br />
 			<span class="space"/><span class="comments">*/</span><br />
-			Hey Girl !<br />
+			Hi Manya !<br />
 			Do you remember the day we first met?<br />
-			<span class="comments">// The ET-LAB Friday. </span><br />
-			Since that day a spark begun;<br />
-			<span class="comments">// Your face Your Voice Your Words.</span><br />
-			Your everything got imprinted in my heart;<br />
-			As the time went on;<br />
-			The Bond grew stronger and stronger;<br />
-			Journey from Infatuation to Love;<br />
-			We have traveled a long way together;<br />
-			There have been fights ;<br />
-			<span class="comments">// And I'm sure there will be more.</span><br />
-			But our Bond will always grow back Stronger;<br />
+			<span class="comments">// OMG OK IT WAS YESTERDAY ONLY </span><br />
+			Since that moment I met you a spark begun;<br />
+			<span class="comments">// Your eyes Your Face Your Smile Your Lips</span><br />
+			Your everything got imprinted in my heart (REALLY YOU CAN EVEN CHECK IT);<br />
+			Since Morning, I couldn't get my head around your thoughts I've been thinking about tomorrow continously;<br />
+			You love me so much, and obviously I love you more. But Ykw Things are so perfect with you I need you forever;<br />
+			We met like 5 days ago Ik but it feels like Ive known you for a month now;<br />
+			You are so so pretty, fuck you for thinking "raj you think so high of me, i'm not that attractive" Manya you literally made everyone else unattractive;<br />
+			It will always be like this, I'm never falling out of love with you ;<br />
+			<span class="comments">// And I'm sure you won't even.</span><br />
+			I know people say "If you give too much attention, they will take you lightly" but Manya IDC about anything I can stop being vulnerable, I can hide the lover boy in me but I don't want to and I am not because I love you;<br />
 			<br>
 			<br>
 			All I want to say is:<br />
 			Baby, I will love you forever;<br />
+			We are never going away from each other;<br />
 			<br>
 			<br>
-			Now If you want to hug me you can touch the heart below<br />
+			Now If you want to hug me you can touch the heart right now and just say give me a kiss on the voicenote<br />
 			<br>
 			<span id="heartspan">
 			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
@@ -55,7 +56,7 @@
 			<canvas id="garden"></canvas>
 			<div id="words">
 				<div id="messages">
-					वर्षा ऋतु FOREVER
+					Manya is Raj's FOREVER
 					<div id="elapseClock"></div>
 				</div>
 				<div id="loveu">
@@ -70,12 +71,12 @@
 <script type="text/javascript">
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
-var together = new Date();
-together.setFullYear(2016, 8, 5);
-together.setHours(16);
-together.setMinutes(30);
-together.setSeconds(0);
-together.setMilliseconds(0);
+var targetTime = new Date();
+targetTime.setFullYear(2024, 11, 9);
+targetTime.setHours(9);
+targetTime.setMinutes(0);
+targetTime.setSeconds(0);
+targetTime.setMilliseconds(0);
 
 if (!document.createElement('canvas').getContext) {
 	var msg = document.createElement("div");
@@ -91,13 +92,28 @@ if (!document.createElement('canvas').getContext) {
 		startHeartAnimation();
 	}, 5000);
 
-	timeElapse(together);
+	timeLeft(targetTime);
 	setInterval(function () {
-		timeElapse(together);
-	}, 500);
+        	timeLeft(targetTime);
+	}, 1000);
 
 	adjustCodePosition();
 	$("#code").typewriter();
+}
+function timeLeft(targetTime) {
+    var now = new Date();
+    var timeRemaining = targetTime - now;
+
+    if (timeRemaining > 0) {
+        var hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+        var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        var timeString = `${hours}h ${minutes}m ${seconds}s`;
+        $("#elapseClock").text(timeString);
+    } else {
+        $("#elapseClock").text("Time is up!");
+    }
 }
 </script>
 </body>
